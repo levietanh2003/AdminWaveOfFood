@@ -105,23 +105,23 @@
         android:textAllCaps="false"
         android:paddingLeft="10dp"
         android:background="@drawable/background_edittext"
-        app:layout_constraintEnd_toStartOf="@+id/btn_login"
+        app:layout_constraintEnd_toStartOf="@+id/btnGoogle"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/btn_login"
+        android:id="@+id/btnGoogle"
         android:layout_width="160dp"
         android:layout_height="60dp"
         android:layout_marginTop="20dp"
-        android:text="Login"
-        android:paddingRight="10dp"
-        android:paddingLeft="10dp"
-        android:textAllCaps="false"
         android:background="@drawable/background_edittext"
-        android:textColor="@color/black"
         android:drawableLeft="@drawable/ic_google"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Google"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/btn_facebook"
@@ -139,8 +139,21 @@
         android:textAllCaps="false"
         android:background="@drawable/cta_button"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btn_login"
+        app:layout_constraintEnd_toEndOf="@+id/btnGoogle"
         app:layout_constraintStart_toStartOf="@+id/btn_facebook"
         app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="@string/Don_Have_Account"
+        android:textSize="13sp"
+        android:fontFamily="@font/lato"
+        android:textColor="#BB0C24"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnLogin" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

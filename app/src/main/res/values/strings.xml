@@ -4,4 +4,6 @@
     <string name="title_LoginAdmin">Login To Your \nAdmin Dashboard</string>
     <string name="or_google_facebook">or \n Continue With</string>
     <string name="Don_Have_Account">Don’t Have Account?</string>
+    <string name="Title_SignUp">Sign Up Here For Your \nAdmin Dashboard</string>
+    <string name="already_Have_An_Account">Already Have An Account?</string>
 </resources>

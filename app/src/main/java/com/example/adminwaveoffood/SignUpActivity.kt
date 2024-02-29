@@ -33,8 +33,6 @@ class SignUpActivity : AppCompatActivity() {
 
         //  thao tac su kien an hien  mat khau
         val editText = binding.editTextTextPassword
-//        val eyeHideDrawable = ContextCompat.getDrawable(this, R.drawable.arrow_down_float)
-//        val eyeShowDrawable = ContextCompat.getDrawable(this, R.drawable.btn_dialog)
         val eyeHideDrawable = applicationContext.resources.getDrawable(R.drawable.arrow_down_float, null)
         val eyeShowDrawable = applicationContext.resources.getDrawable(R.drawable.btn_dialog, null)
 

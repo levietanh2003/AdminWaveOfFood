@@ -21,7 +21,7 @@ class LoginActivity : AppCompatActivity() {
 
         // luong xu ly login
         binding.btnLogin.setOnClickListener {
-            startActivity(Intent(this, SignUpActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 }

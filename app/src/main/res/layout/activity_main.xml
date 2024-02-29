@@ -6,11 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_marginTop="32dp"
         android:layout_marginLeft="32dp"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,30 +20,33 @@
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/title_Splash"
-        android:textSize="40sp"
-        android:fontFamily="@font/yeseva_one"
-        android:textColor="@color/colo_main"
         android:layout_marginLeft="12dp"
+        android:fontFamily="@font/yeseva_one"
+        android:text="@string/title_Splash"
+        android:textColor="@color/colo_main"
+        android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imageView2"
         app:layout_constraintTop_toTopOf="@+id/imageView2" />
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
         android:layout_width="0dp"
-        android:layout_height="105dp"
-        app:cardCornerRadius="15dp"
+        android:layout_height="110dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginTop="12dp"
+        android:layout_marginRight="8dp"
+        android:elevation="15dp"
+        app:cardCornerRadius="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView6" >
+        app:layout_constraintTop_toBottomOf="@+id/textView6">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_margin="3dp">
+            android:layout_margin="8dp">
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -81,13 +83,12 @@
                         android:id="@+id/num_Completed_Order"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:textSize="20sp"
-                        android:fontFamily="@font/yeseva_one"
-                        android:textColor="@color/black"
                         android:layout_gravity="bottom"
-                        android:text="50" />
-
+                        android:fontFamily="@font/yeseva_one"
+                        android:gravity="center"
+                        android:text="50"
+                        android:textColor="@color/black"
+                        android:textSize="20sp" />
 
                 </LinearLayout>
 
@@ -113,21 +114,21 @@
                         android:layout_marginTop="3dp"
                         android:fontFamily="@font/yeseva_one"
                         android:gravity="center"
-                        android:textStyle="bold"
                         android:text="Pending \nOrder"
                         android:textColor="@color/colo_main"
-                        android:textSize="14sp" />
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
 
                     <TextView
-                        android:id="@+id/textView10"
+                        android:id="@+id/num_Pending_Order"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:textSize="20sp"
-                        android:gravity="center"
-                        android:textColor="#FEAD1D"
-                        android:fontFamily="@font/yeseva_one"
                         android:layout_gravity="bottom"
-                        android:text="20" />
+                        android:fontFamily="@font/yeseva_one"
+                        android:gravity="center"
+                        android:text="20"
+                        android:textColor="#FEAD1D"
+                        android:textSize="20sp" />
                 </LinearLayout>
 
                 <LinearLayout
@@ -156,21 +157,319 @@
                         android:textSize="14sp" />
 
                     <TextView
-                        android:id="@+id/textView11"
+                        android:id="@+id/num_Whole_Time_Earning"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:layout_gravity="bottom"
                         android:fontFamily="@font/yeseva_one"
-                        android:textSize="20sp"
-                        android:textColor="#53E88B"
                         android:gravity="center"
-                        android:text="100.000" />
+                        android:text="100.000"
+                        android:textColor="#53E88B"
+                        android:textSize="20sp" />
                 </LinearLayout>
 
             </LinearLayout>
 
 
-
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:orientation="vertical"
+        android:paddingTop ="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/cardView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/background_btn_item_main"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imgAddItem"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    app:srcCompat="@drawable/ic_plus_" />
+
+                <TextView
+                    android:id="@+id/txtAddItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/yeseva_one"
+                    android:gravity="center"
+                    android:text="Add Item"
+                    android:textColor="@color/colo_main"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/background_btn_item_main"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imgAllItemMenu"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_all_item_menu" />
+
+                <TextView
+                    android:id="@+id/txtAllItemMenu"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/yeseva_one"
+                    android:gravity="center"
+                    android:text="All item menu"
+                    android:textColor="@color/colo_main"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/background_btn_item_main"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imgOutForDelivery"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_out_for_delivery" />
+
+                <TextView
+                    android:id="@+id/txtOutForDelivery"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/yeseva_one"
+                    android:gravity="center"
+                    android:text="Out For Delivery"
+                    android:textColor="@color/colo_main"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/background_btn_item_main"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imgFeedback"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_message" />
+
+                <TextView
+                    android:id="@+id/txtFeedback"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/yeseva_one"
+                    android:gravity="center"
+                    android:text="Feedback"
+                    android:textColor="@color/colo_main"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/background_btn_item_main"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_profile" />
+
+                <TextView
+                    android:id="@+id/txtProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/yeseva_one"
+                    android:gravity="center"
+                    android:text="Profile"
+                    android:textColor="@color/colo_main"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/background_btn_item_main"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imgCurrencyDollar"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_currency_dollar" />
+
+                <TextView
+                    android:id="@+id/txtCurrencyDollar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/yeseva_one"
+                    android:gravity="center"
+                    android:text="Money On Holed"
+                    android:textColor="@color/colo_main"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/background_btn_item_main"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imgAddUser"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/ic_user_plus" />
+
+                <TextView
+                    android:id="@+id/txtAddUser"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/yeseva_one"
+                    android:gravity="center"
+                    android:text="Create New User"
+                    android:textColor="@color/colo_main"
+                    android:textSize="10sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="85dp"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="5dp"
+                android:layout_weight="0.1"
+                android:background="@drawable/background_btn_item_main"
+                android:orientation="vertical">
+
+
+                <ImageView
+                    android:id="@+id/imgLogOut"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/log_out" />
+
+                <TextView
+                    android:id="@+id/txtLogOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/yeseva_one"
+                    android:gravity="center"
+                    android:text="Log Out"
+                    android:textColor="@color/colo_main"
+                    android:textSize="10sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

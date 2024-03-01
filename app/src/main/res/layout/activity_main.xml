@@ -196,6 +196,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
+                android:id="@+id/btn_AddMenu"
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:layout_gravity="center_vertical"
@@ -214,13 +215,13 @@
                     app:srcCompat="@drawable/ic_plus_" />
 
                 <TextView
-                    android:id="@+id/txtAddItem"
+                    android:id="@+id/txtAddMenu"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/yeseva_one"
                     android:gravity="center"
-                    android:text="Add Item"
+                    android:text="Add Menu"
                     android:textColor="@color/colo_main"
                     android:textSize="10sp" />
             </LinearLayout>

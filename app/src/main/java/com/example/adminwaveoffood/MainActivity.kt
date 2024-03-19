@@ -23,5 +23,10 @@ class MainActivity : AppCompatActivity() {
         binding.allItem.setOnClickListener{
             startActivity(Intent(this, AllItemActivity::class.java))
         }
+
+        // su kien vao outForDelivery
+        binding.outForDelivery.setOnClickListener{
+            startActivity(Intent(this, OutForDeliveryActivity::class.java))
+        }
     }
 }

@@ -18,5 +18,10 @@ class MainActivity : AppCompatActivity() {
         binding.btnAddMenu.setOnClickListener {
             startActivity(Intent(this, AddItemActivity::class.java))
         }
+
+        // su kien vao allItem
+        binding.allItem.setOnClickListener{
+            startActivity(Intent(this, AllItemActivity::class.java))
+        }
     }
 }

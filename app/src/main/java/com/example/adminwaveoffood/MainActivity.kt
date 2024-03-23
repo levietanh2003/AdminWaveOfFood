@@ -28,5 +28,15 @@ class MainActivity : AppCompatActivity() {
         binding.outForDelivery.setOnClickListener{
             startActivity(Intent(this, OutForDeliveryActivity::class.java))
         }
+
+        // su kien vao profile admin
+        binding.adminProfile.setOnClickListener{
+            startActivity(Intent(this, AdminProfileMainActivity::class.java))
+        }
+
+        // su kien vao feedback
+        binding.feedBack.setOnClickListener{
+            startActivity(Intent(this, AdminFeedBackMainActivity::class.java))
+        }
     }
 }

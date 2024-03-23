@@ -301,6 +301,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/feedBack"
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:layout_gravity="center_vertical"
@@ -343,6 +344,7 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
+                android:id="@+id/adminProfile"
                 android:layout_width="match_parent"
                 android:layout_height="85dp"
                 android:layout_gravity="center_vertical"

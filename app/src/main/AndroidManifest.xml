@@ -12,6 +12,12 @@
         android:theme="@style/Theme.AdminWaveOfFood"
         tools:targetApi="31">
         <activity
+            android:name=".AdminFeedBackMainActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AdminProfileMainActivity"
+            android:exported="false" />
+        <activity
             android:name=".OutForDeliveryActivity"
             android:exported="false" />
         <activity

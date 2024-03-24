@@ -38,5 +38,15 @@ class MainActivity : AppCompatActivity() {
         binding.feedBack.setOnClickListener{
             startActivity(Intent(this, AdminFeedBackMainActivity::class.java))
         }
+
+        // su kien tao tai khoan user moi
+        binding.createUserAdmin.setOnClickListener{
+            startActivity(Intent(this, CreateUserActivity::class.java))
+        }
+
+        // su kien pending order
+        binding.pendingOrder.setOnClickListener{
+            startActivity(Intent(this, PendingOrderActivity::class.java))
+        }
     }
 }

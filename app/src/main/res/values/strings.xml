@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">AdminWaveOfFood</string>
     <string name="title_Splash">Waves Of Food</string>
     <string name="title_LoginAdmin">Login To Your \nAdmin Dashboard</string>
@@ -6,4 +6,5 @@
     <string name="Don_Have_Account">Don’t Have Account?</string>
     <string name="Title_SignUp">Sign Up Here For Your \nAdmin Dashboard</string>
     <string name="already_Have_An_Account">Already Have An Account?</string>
+    <string name="default_web_client_id" tools:ignore="TypographyDashes">240527090798-9opflbhpeq7ta6a9q70olet5idjr017p.apps.googleusercontent.com</string>
 </resources>

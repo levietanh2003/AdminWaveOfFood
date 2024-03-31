@@ -10,8 +10,8 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="91dp"
-        android:layout_height="92dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_marginTop="80dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
         app:layout_constraintTop_toBottomOf="@+id/titleLogin" />
 
     <EditText
-        android:id="@+id/editTextEmail"
+        android:id="@+id/emailLogin"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="12dp"
@@ -64,7 +64,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
     <EditText
-        android:id="@+id/editTextPassword"
+        android:id="@+id/passwordLogin"
         android:layout_width="0dp"
         android:layout_height="50dp"
         android:layout_marginStart="12dp"
@@ -78,7 +78,7 @@
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/editTextEmail" />
+        app:layout_constraintTop_toBottomOf="@id/emailLogin" />
 
     <TextView
         android:id="@+id/textView5"
@@ -90,9 +90,9 @@
         android:textAlignment="center"
         android:textColor="#BB0C24"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/editTextPassword"
-        app:layout_constraintStart_toStartOf="@+id/editTextPassword"
-        app:layout_constraintTop_toBottomOf="@+id/editTextPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/passwordLogin"
+        app:layout_constraintStart_toStartOf="@+id/passwordLogin"
+        app:layout_constraintTop_toBottomOf="@+id/passwordLogin" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_facebook"

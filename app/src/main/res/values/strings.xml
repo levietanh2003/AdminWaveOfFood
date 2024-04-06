@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">AdminWaveOfFood</string>
-    <string name="title_Splash">Waves Of Food</string>
+    <string name="title_Splash">Food Mart</string>
     <string name="title_LoginAdmin">Login To Your \nAdmin Dashboard</string>
     <string name="or_google_facebook">or \n Continue With</string>
     <string name="Don_Have_Account">Don’t Have Account?</string>

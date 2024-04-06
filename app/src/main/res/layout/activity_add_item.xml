@@ -42,12 +42,12 @@
                 app:layout_constraintTop_toTopOf="@+id/btn_Back" />
 
             <EditText
-                android:id="@+id/btnAddMenu"
+                android:id="@+id/nameFoodAddMenu"
                 android:layout_width="0dp"
                 android:layout_height="57dp"
                 android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
                 android:layout_marginEnd="8dp"
-                android:layout_marginTop="8dp"
                 android:background="@drawable/background_edittext"
                 android:elevation="5dp"
                 android:ems="10"
@@ -57,11 +57,12 @@
                 android:paddingLeft="15dp"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
             <EditText
-                android:id="@+id/editTextPrice"
+                android:id="@+id/priceFoodAddMenu"
                 android:layout_width="0dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="8dp"
@@ -73,10 +74,10 @@
                 android:inputType="text"
                 android:paddingLeft="15dp"
                 android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="@+id/btnAddMenu"
+                app:layout_constraintEnd_toEndOf="@+id/nameFoodAddMenu"
                 app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="@+id/btnAddMenu"
-                app:layout_constraintTop_toBottomOf="@+id/btnAddMenu" />
+                app:layout_constraintStart_toStartOf="@+id/nameFoodAddMenu"
+                app:layout_constraintTop_toBottomOf="@+id/nameFoodAddMenu" />
 
             <TextView
                 android:id="@+id/txtSelectImage"
@@ -94,9 +95,10 @@
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/btnAddMenu"
-                app:layout_constraintStart_toStartOf="@+id/editTextPrice"
-                app:layout_constraintTop_toBottomOf="@+id/editTextPrice" />
+                app:layout_constraintEnd_toEndOf="@+id/nameFoodAddMenu"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/priceFoodAddMenu"
+                app:layout_constraintTop_toBottomOf="@+id/spinnerTyOfDish" />
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cardView"
@@ -117,7 +119,7 @@
             </androidx.cardview.widget.CardView>
 
             <TextView
-                android:id="@+id/editTextShortDescription"
+                android:id="@+id/foodDescriptionAddMenu"
                 android:layout_width="0dp"
                 android:layout_height="57dp"
                 android:layout_marginTop="8dp"
@@ -135,21 +137,22 @@
                 app:layout_constraintTop_toBottomOf="@+id/cardView" />
 
             <EditText
-                android:id="@+id/contentDescription"
+                android:id="@+id/contentDescriptionAddMenu"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/background_edittext"
                 android:fontFamily="@font/lato"
-                android:paddingLeft="15dp"
-                android:text="Viet noi dung o day "
+                android:hint="Mô tả món ăn"
                 android:inputType="text"
+                android:minHeight="48dp"
+                android:paddingLeft="15dp"
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="@+id/cardView"
                 app:layout_constraintHorizontal_bias="0.1"
-                app:layout_constraintStart_toStartOf="@+id/editTextShortDescription"
-                app:layout_constraintTop_toBottomOf="@+id/editTextShortDescription" />
+                app:layout_constraintStart_toStartOf="@+id/foodDescriptionAddMenu"
+                app:layout_constraintTop_toBottomOf="@+id/foodDescriptionAddMenu" />
 
             <TextView
                 android:id="@+id/titleIngredients"
@@ -165,21 +168,21 @@
                 android:textColor="@color/black"
                 android:textSize="14sp"
                 android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="@+id/editTextShortDescription"
-                app:layout_constraintStart_toStartOf="@+id/editTextShortDescription"
-                app:layout_constraintTop_toBottomOf="@+id/contentDescription" />
+                app:layout_constraintEnd_toEndOf="@+id/foodDescriptionAddMenu"
+                app:layout_constraintStart_toStartOf="@+id/foodDescriptionAddMenu"
+                app:layout_constraintTop_toBottomOf="@+id/contentDescriptionAddMenu" />
 
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/ingredientFoodAddMenu"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:background="@drawable/background_edittext"
-                android:text="Noddle \n Salad\n Burger\n Herbal Pan Cake\n Momos"
-                android:textSize="14sp"
+                android:hint="Mô tả nguyên liệu"
+                android:minHeight="48dp"
                 android:paddingLeft="18dp"
-
-                app:layout_constraintEnd_toEndOf="@+id/contentDescription"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/contentDescriptionAddMenu"
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="@+id/titleIngredients"
                 app:layout_constraintTop_toBottomOf="@+id/titleIngredients" />
@@ -191,7 +194,7 @@
                 android:layout_marginTop="16dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editText"
+                app:layout_constraintTop_toBottomOf="@+id/ingredientFoodAddMenu"
                 android:background="@drawable/cta_button"
                 android:text="Add Menu"
                 android:elevation="5dp"
@@ -200,6 +203,17 @@
                 android:layout_marginBottom="16dp"
                 >
             </androidx.appcompat.widget.AppCompatButton>
+
+            <Spinner
+                android:id="@+id/spinnerTyOfDish"
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="8dp"
+                android:textAlignment="viewStart"
+                app:layout_constraintEnd_toEndOf="@+id/priceFoodAddMenu"
+                app:layout_constraintStart_toStartOf="@+id/priceFoodAddMenu"
+                app:layout_constraintTop_toBottomOf="@+id/priceFoodAddMenu"
+                app:layout_constraintVertical_bias="0.5" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </ScrollView>

@@ -78,6 +78,7 @@ class LoginActivity : AppCompatActivity() {
         }
     }
 
+    // launcher for google sign-in
     private fun crateUserAccount(email: String, password: String) {
             auth.signInWithEmailAndPassword(email, password).addOnCompleteListener() { task ->
                 if(task.isSuccessful){
@@ -121,9 +122,9 @@ class LoginActivity : AppCompatActivity() {
                     if(authTask.isSuccessful) {
                         // dang nhap thanh cong bang tai khoan google
                         Toast.makeText(this, "Đăng nhập tài khoản Google thành công", Toast.LENGTH_SHORT).show()
-                        //updateUI(null)
-                        startActivity(Intent(this, MainActivity::class.java))
-
+                        updateUI(authTask.result?.user)
+                        //startActivity(Intent(this, MainActivity::class.java))
+                        finish()
                     }else{
                         Toast.makeText(this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show()
                     }
@@ -131,6 +132,15 @@ class LoginActivity : AppCompatActivity() {
             }else{
                 Toast.makeText(this, "Đăng nhập thất bại", Toast.LENGTH_SHORT).show()
             }
+        }
+    }
+    // kiem tra nguoi dung dang nhap da dang nhap chua
+    override fun onStart() {
+        super.onStart()
+        val currentUser = auth.currentUser
+        if (currentUser != null) {
+            startActivity(Intent(this, MainActivity::class.java))
+            finish()
         }
     }
     private fun updateUI(user: FirebaseUser?) {
